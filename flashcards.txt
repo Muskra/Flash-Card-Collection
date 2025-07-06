@@ -1,0 +1,116 @@
+1 structure's name start
+s_
+
+1 typedef's name start
+t_
+
+1 union's name start
+u_
+
+1 enum's name start
+e_
+
+1 global's name start
+g_
+
+1 ft, identifiers, variables, defines, files, directories' names
+lowercases only, digits, and _
+
+1* naming rules
+explicit and english, each word seperated by an underscore
+
+1 globals
+only const or static, otherwise forbidden
+
+1 does a file need to compile?
+yes not compiling files are not allowed
+
+2 function size
+25 lines
+
+2 how many columns per lines
+80 columns
+
+2 functions separation
+they must be seperated by an empty line, and have preprocessor instructions in between
+
+2 tabs length
+they must be 4 spaces long
+
+2 blocks indentation
+you must indent with {} in a block, and return excepted for structs, enums and unions
+
+2 spaces and tabs
+empty lines must be fully empty, no spaces or tabulations; lines can't end with spaces or tabulations; you cannot have two consecutive empty lines, nor two consecutive spaces; comma and semicolones must be followed by a space unless it's the end of a line; operators and operands must be followed by a space; c keywords must be followed by a space, except for keywords for types (sizeof counts)
+
+2 declarations
+they must be at the beginning of a function; one per line; cannot initialize on he same line; you must put an empty line in between declarations and the rest of the function
+
+2 pointers
+asterisks must be stuck to variable names
+
+2 assignments
+multiple assignments on the same line is forbidden; assignment in condition is forbidden
+
+2 control structures
+new line after; you can split in multiple lines, operators must be at the beginning of the new line; braces are optional if there is a single instruction on a single line
+
+3 function parameters
+at most 4 parameters; if it does not have any, it must be prototyped with "void"
+
+3 function variables
+5 variables at most per function
+
+3 function return
+return must be between parenthesis unless it returns nothing
+
+3 function name
+functions must have a tabulation between its return type and its name
+
+4 typedef, struct, enum, and union
+space between the name and the type at declaration; regular indentation rules appy like others blocks; all structures' names must be indented on the same column for their scope; structure cannot be declared in a .c file (in headers then I guess)
+
+5* allowed elements in headers
+header inclusions, declarations, defines, prototypes and macros
+
+5 headers organization
+includes must be at the beginning of the file
+
+5 include rule
+you cannot include a c file in another nor in a header
+
+5 headers names
+you must check with "ifndef" and "endif" if the name is not a duplicate
+
+5* unused headers
+they are forbidden
+
+6 headers
+your .c and .h files must begin with it, you can access it with vim using :Stdheader or F1
+
+6 headers informations
+they must be up-to-date, normally automatically
+
+7* macros
+you can't use macros not included within the scope of the given project; their names must be only in UPPERCASE; you cannot define multilines macros
+
+7 preprocessor instructions
+are fobidden outside of global scope; must be indented inside blocks (if, ifdef, ifdef)
+
+8 forbidden stuff
+for, do while, switch, case, goto, ternary operators (?), variable length arrays, implicit type in variable declerations
+
+9 comments
+they cannot be inside a function body
+
+9* comments' language
+in english
+
+9* comments cannot justify
+a bad or a carryall function
+
+10 makefile norminette
+they are not checked by it, and must be check by the student evaluating
+
+10 makefile must
+have $(NAME), clean, fclean, re and all rules; all rule must be the default one executed when typing only "make"; if the makefie relinks when not necessary project is considered non-functional; non-system libraries must be automatically compiled; cannot use flashcards (*)
